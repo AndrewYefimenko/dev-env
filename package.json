@@ -2,7 +2,14 @@
   "name": "dev-env",
   "version": "1.0.0",
   "description": "js dev environment",
-  "scripts": {},
+  "scripts": {
+    "prestart": "node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check server",
+    "server": "node buildScripts/srcServer.js",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 3000 --subdomain iefimenko",
+    "share": "npm-run-all --parallel server localtunnel"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AndrewYefimenko/dev-env.git"
