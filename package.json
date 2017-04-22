@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "js dev environment",
   "scripts": {
-    "prestart": "node buildScripts/startMessage.js",
+    "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check server",
     "server": "node buildScripts/srcServer.js",
     "security-check": "nsp check",

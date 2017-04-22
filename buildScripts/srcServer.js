@@ -1,15 +1,15 @@
-var express = require('express');
-var path = require('path');
-var open = require('open');
+import express from 'express';
+import path from 'path';
+import open from 'open';
 
-var port = 3000;
-var server = express();
+const port = 3000;
+const server = express();
 
-server.get('/', function(req, res){
+server.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../src/index.html'));
 });
 
-server.listen(port, function(err){
+server.listen(port, (err) => {
   if (err) {
     console.log(err);
   } else {
