@@ -4,7 +4,7 @@ import open from 'open';
 import webpack from 'webpack';
 import webpackConfig from '../webpack.config.dev';
 import webpackMiddleware from 'webpack-dev-middleware';
-
+/* eslint-disable no-console */
 const port = 3000;
 const server = express();
 const compiler = webpack(webpackConfig);
