@@ -7,13 +7,13 @@ getUsers().then(result => {
 
   /* Get all users */
   result.forEach(function(user){
-    userBody += `<tr>
-                     <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
-                     <td>${user.id}</td>
-                     <td>${user.firstName}</td>
-                     <td>${user.lastName}</td>
-                     <td>${user.email}</td>
-                 </tr>`
+    userBody += `<div class="table-row">
+        <div class="table-cell"><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></div>
+        <div class="table-cell">${user.id}</div>
+        <div class="table-cell">${user.firstName}</div>
+        <div class="table-cell">${user.lastName}</div>
+        <div class="table-cell">${user.email}</div>
+      </div>`
   });
   global.document.getElementById('users').innerHTML = userBody;
 
